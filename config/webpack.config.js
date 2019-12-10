@@ -180,7 +180,7 @@ module.exports = function(webpackEnv) {
         : isEnvDemo 
             ? 'static/js/[name].[contenthash:8].js'
             : isEnvDevelopment && 'static/js/bundle.js', // CRL: Updated output.filename
-      libraryTarget: (isEnvDemo || isEnvProduction) ? 'umd' : undefined,  // CRL: Add output.libraryTarget
+      libraryTarget: (isEnvDemo || isEnvProduction) ? 'commonjs2' : undefined,  // CRL: Add output.libraryTarget
       // TODO: remove this when upgrading to webpack 5
       futureEmitAssets: true,
       // There are also additional JS chunk files if you use code splitting.
